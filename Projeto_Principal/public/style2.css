@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inicio #home{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 30px; 
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.inicio #home:hover{
+    color: #bc9667;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/resto/excentrix-high-resolution-logo-white-transparent.png);
+    background-size: 30vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #bc9667;
+}
+
+#login {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group input {
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #edeae3;
+    color: #1b1b1b;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #bc9667;
+    color: #1b1b1b;
+    font-weight: bold;
+}
+
+.form-group input::placeholder {
+    color: #6f6f6f;
+}
+
+h2 {
+    color: #FAFAFA;
+    padding-bottom: 10px;
+}
+
+.form-container {
+    margin-top: 65px;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+p {
+    padding-top: 10px;
+}
+
+/* Adicionando media queries para tornar o design responsivo */
+
+@media screen and (min-width: 600px) {
+    .form-group input,
+    .submit-btn {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .form-group input,
+    .submit-btn {
+        width: 400px;
+    }
+}
+
+
+
+

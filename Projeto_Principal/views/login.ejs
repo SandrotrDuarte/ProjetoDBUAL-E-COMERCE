@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="inicio">
+      <i class='bx bx-home' id="home"></i>
+    </div>
+    <div class="form-container" id="login">
+      <h2>Inicia Sessão</h2>
+      <!-- Adicione um espaço para exibir mensagens de erro -->
+      <% if (typeof error !== 'undefined' && error !== null) { %>
+          <div class="error-message">
+              <%= error %>
+          </div>
+      <% } %>
+      <form action="/login" method="post">
+          <div class="form-group">
+              <input type="text" id="name" name="username" placeholder="Nome de utilizador" required autocomplete="off">
+          </div>
+          <div class="form-group">
+              <input type="password" id="password" name="password" placeholder="Palavra-passe" required>
+          </div>
+          <button type="submit" class="submit-btn">Iniciar</button>
+      </form>
+      <p>Ainda não tens conta? <a class="link" href="/signup">Regista-te</a></p>
+  </div>
+    
+    <script>
+      document.getElementById("home").addEventListener("click", function() {
+          // Redireciona para o index.html quando o ícone "home" é clicado
+          window.location.href = "/index.html";
+      });
+    </script>
+</body>
+</html>
